@@ -1,0 +1,233 @@
+body{
+  margin: 0;
+  background-color: #113332;
+  font-family: arial;
+}
+
+.consult{
+  margin: 30px 0;
+  height: 90vh;
+  background: #cccccc;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 170px 1fr 1px;
+  grid-template-areas: "sidebar nav ."
+                       "sidebar . ."
+                       "sidebar content ."
+                       "sidebar content ."
+                       "sidebar content ."
+                       "sidebar . ."
+}
+
+.nav{
+  grid-area: nav;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.content{
+  grid-area: content;
+}
+
+.content-search{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.tab{
+  font-size: 18px;
+  color: white;
+  background-color: #2a7775;
+  border: 0;
+  padding: 5px;
+  width: 135px;
+  margin: 0 -3px;
+}
+
+.cons{
+  border: solid 2px #2a7775;
+  border-radius: 4px;
+  color: #2a7775;
+  background-color: white;
+}
+
+.left{
+  border-radius: 4px 0 0 4px;
+  margin-left: 25px;
+}
+
+.right{
+    border-radius: 0 4px 4px 0;
+}
+
+.sidebar{
+  grid-area: sidebar;
+  background-color: #2a7775;
+  padding-top: 20px;
+  padding-left: 6px;
+  padding-bottom: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.options{
+  width: 100%;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.btn{
+  height: 30px;
+  width: 80%;
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: white;
+  background-color: #113332;
+  border: 0;
+  border-radius: 32px 0 10px 32px;
+  box-shadow: 0 3px 6px #113332;
+  position: relative;
+}
+
+canvas{
+  width: 75%;
+  height: 35px;
+  margin-bottom: 8px;
+  background-color: #113332;
+  border: 0;
+  border-radius: 32px 0 10px 32px;
+  box-shadow: 0 3px 6px #113332;
+}
+
+.admin{
+  font-size: 18px;
+  color: white;
+  margin-top: -35px;
+  margin-left: 43px;
+  align-self: center;
+  position: relative;
+}
+
+a{
+  color: #113332;
+  font-weight: bold;
+  justify-content: flex-end;
+  font-size: 18px;
+  align-self: center;
+  margin-top: 20px;
+}
+
+.search{
+  width: 60%;
+  grid-area: search;
+  display: flex;
+  align-items: center;
+}
+
+input{
+  width: 50%;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 14px;
+  margin-right: 20px;
+}
+
+select{
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 14px;
+  background-color: #2a7775;
+  color: white;
+}
+
+.add{
+  grid-area: add;
+  display: flex;
+  align-items: center;
+}
+
+.btnadd{
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  color: white;
+  background-color: #2a7775;
+  border: 0;
+  margin-right: 3px;
+  text-align: center;
+}
+
+.datagrid{
+  margin-top: 20px;
+  grid-area: datagrid;
+  background-color: #2a7775;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th{
+  background-color: white;
+  color: #2a7775;
+}
+
+td{
+  color: white;
+  border-right: 1px solid white;
+}
+
+th, td{
+  text-align: center;
+  padding: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .consult{
+    grid-row-gap: 20px;
+    grid-template-columns: 1px 1fr 1fr 1px;
+    grid-template-areas: "nav nav nav nav"
+                         ". content content ."
+                         ". content content ."
+                         "sidebar sidebar sidebar sidebar"
+  }
+
+.tabs{
+  justify-content: center;
+}
+
+.tab{
+    margin:5px;
+    width: 25%;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.options{
+  width: 50%;
+}
+
+.sidebar{
+  align-items: flex-end;
+}
+
+.content-search{
+  padding: 0;
+  justify-content: space-around;
+}
+
+.add span{
+  font-size: 12px;
+}
+
+.datagrid{
+  overflow: auto;
+}
+}
