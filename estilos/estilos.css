@@ -1,76 +1,108 @@
-.container{
-  display: grid;
-  height: 97vh;
-  grid-template: 0.5fr 8.5fr 0.5fr / 0.5fr 8.5fr 0.5fr;
-}
-
-.login{
-  display: grid;
-  background: #0C2322;
-  grid-row: 2;
-  grid-column: 2;
-
-  grid-template: 79fr 345fr 79fr / 413fr 123fr 413fr;
-}
-
-.logo{
-  grid-row: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-figure{
+body{
   margin: 0;
+  background-color: #113332;
+  font-family: arial;
 }
 
-.logo img{
-  width: 100%;
+.container{
+  margin: 30px 0;
 }
 
-.linea{
-  grid-row: 2;
-  grid-column: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.menu{
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  grid-template-areas: "sidebar content"
 }
 
-.linea canvas{
-  height: 100%;
-  width: 0;
-  border:1px solid #2A7775;
-}
-
-.form{
-  grid-row: 2;
-  grid-column: 3;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-
-form{
+.sidebar{
+  grid-area: sidebar;
+  background-color: #2a7775;
+  padding-top: 20px;
+  padding-left: 6px;
+  padding-bottom: 3px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  justify-content: space-between;
 }
 
-.input{
-  width: 95%;
-  height: 10%;
-  border-radius: 4px;
+.options{
+  width: 100%;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.text{
-font-size: 23px;
+button{
+  height: 30px;
+  width: 80%;
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: white;
+  background-color: #113332;
+  border: 0;
+  border-radius: 32px 0 10px 32px;
+  box-shadow: 0 3px 6px #113332;
+  position: relative;
 }
 
-.button{
-  background-color: #2A7775;
-  color: #E4E4E4;
+canvas{
+  width: 75%;
+  height: 35px;
+  margin-bottom: 8px;
+  background-color: #113332;
+  border: 0;
+  border-radius: 32px 0 10px 32px;
+  box-shadow: 0 3px 6px #113332;
+}
+
+span{
   font-size: 18px;
+  color: white;
+  margin-top: -35px;
+  margin-left: 43px;
+  align-self: center;
+  position: relative;
+}
+
+a{
+  color: #113332;
+  font-weight: bold;
+  justify-content: flex-end;
+  font-size: 18px;
+  align-self: center;
+  margin-top: 20px;
+}
+
+.content{
+  max-height: 100vh;
+  grid-area: content;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  width: 80%;
+}
+
+@media screen and (max-width:768px){
+  .menu{
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 1fr;
+    grid-template-areas: "content"
+                         "sidebar"
+  }
+
+.options{
   width: 50%;
-  margin: 0 auto;
+}
+
+.sidebar{
+  align-items: flex-end;
+}
 }
