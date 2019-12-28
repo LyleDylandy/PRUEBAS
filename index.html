@@ -5,26 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="stylesheet" href="estilos/estilos.css">
+<link rel="stylesheet" href="estilos/estilos.css">
 
-  <title>prueba 2</title>
+  <title>Prueba 3</title>
 </head>
 <body>
-  <div class="container">
-    <div class="menu">
-      <section class="sidebar">
-        <div class="options">
-          <button>Pacientes</button>
-          <button>Facturación</button>
+  <div class="consult">
+    <nav class="nav">
+      <div class="tabs">
+        <button class="tab cons">Consulta</button>
+        <button class="tab left">Datos</button>
+        <button class="tab center">Dentiograma</button>
+        <button class="tab center">Tratamientos</button>
+        <button class="tab center">T. Realizados</button>
+        <button class="tab right">Estado Finan.</button>
+      </div>
+    </nav>
+    <section class="sidebar">
+      <div class="options">
+        <button class="btn">Pacientes</button>
+        <button class="btn">Facturación</button>
+      </div>
+      <div class="options">
+        <canvas></canvas>
+        <span class="admin">Admin</span>
+        <a href="">Cerrar sesión</a>
+      </div>
+    </section>
+    <div class="content">
+      <div class="content-search">
+        <div class="search">
+          <input type="text" placeholder="Buscar">
+          <select>
+             <option>Record</option>
+             <option>Nombre</option>
+        </select>
         </div>
-        <div class="options">
-          <canvas></canvas>
-          <span>Admin</span>
-          <a href="">Cerrar sesión</a>
+        <div class="add">
+          <button class="btnadd">+</button>
+          <span>Nuevo paciente</span>
         </div>
-      </section>
-      <div class="content">
-            <img src="wallpaper.png">
+      </div>
+      <div class="datagrid">
+        <table>
+          <tr>
+            <th>Fecha</th>
+            <th>Record</th>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+            <th>Celular</th>
+          </tr>
+          <tr>
+            <td>26/01/2019</td>
+            <td>9999</td>
+            <td>Juan Martinez</td>
+            <td>(809) 999-9999</td>
+            <td>(809) 999-9999</td>
+          </tr>
+          <tr>
+            <td>26/01/2019</td>
+            <td>9999</td>
+            <td>Juan Martinez</td>
+            <td>(809) 999-9999</td>
+            <td>(809) 999-9999</td>
+          </tr>
+          <tr>
+            <td>26/01/2019</td>
+            <td>9999</td>
+            <td>Juan Martinez</td>
+            <td>(809) 999-9999</td>
+            <td>(809) 999-9999</td>
+          </tr>
+          <tr>
+            <td>26/01/2019</td>
+            <td>9999</td>
+            <td>Juan Martinez</td>
+            <td>(809) 999-9999</td>
+            <td>(809) 999-9999</td>
+          </tr>
+          <tr>
+            <td>26/01/2019</td>
+            <td>9999</td>
+            <td>Juan Martinez</td>
+            <td>(809) 999-9999</td>
+            <td>(809) 999-9999</td>
+          </tr>
+          <tbody>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
